@@ -1,0 +1,14 @@
+---
+- name: rte
+  hosts: rte_servers
+  become: yes
+  tasks:
+    - name: Update and upgrade apt packages
+      become: true
+      apt:
+        update_cache: yes
+        upgrade: 'yes'
+      
+    - include_role:
+        name: redis-to-elastic
+...

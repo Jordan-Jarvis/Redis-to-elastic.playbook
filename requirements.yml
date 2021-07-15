@@ -1,0 +1,4 @@
+- src: git+ssh://git@github.com:Jordan-Jarvis/Redis-to-elastic.role.git
+  version: master
+  name: redis-to-elastic
+

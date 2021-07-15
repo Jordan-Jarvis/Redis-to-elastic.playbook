@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+  actions_ingester:
+    image: ubuntu
+    build: .
+    restart: on-failure  
+    environment:
+      redis_stream: 'mystream'
+      sentinel_hosts: 
+        - localhost
+        - anotherserver
+      redis_port: '6379'
+      redis_batch_size: 1 # max number of items per batch
+      redis_batch_timeout: 1 #milliseconds
+      elastic_host: 
+        - elastic-1
+        - elastic-2
+      elastic_index: 'action-datetime'
+

@@ -1,0 +1,8 @@
+aioify
+elasticsearch
+redis
+aioredis
+asyncio
+pydantic
+redis-tools
+aredis

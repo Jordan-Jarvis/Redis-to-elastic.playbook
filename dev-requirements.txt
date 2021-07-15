@@ -1,0 +1,2 @@
+git+ssh://git@bitbucket.secmet.co:7999/dev/smtest.git@0.9.8
+-r requirements.txt
